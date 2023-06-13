@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+      background-color: rgba(241, 241, 241, 0.537);
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="header"></div>
+  <div class="container mt-4">
+    <h2 class="mb-4">All Customers </h2>
+
+    <!-- Create Form -->
+    
+    <button type="submit" class="btn btn-primary">+NEW</button>
+    <hr>
+
+    <!-- Table -->
+    <table class="table table-striped" id="data-table">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="select-all-checkbox"></th>
+          <th>Name</th>
+          <th>Company Name</th>
+          <th>Email</th>
+          <th>Workphone</th>
+          <th>Receivables</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>John Doe</td>
+          <td>ABC Company</td>
+          <td>johndoe@example.com</td>
+          <td>123-456-7890</td>
+          <td>5000</td>
+          
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Jane Smith</td>
+          <td>XYZ Corporation</td>
+          <td>janesmith@example.com</td>
+          <td>987-654-3210</td>
+          <td>8000</td>
+          
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+    <!-- Modal content... -->
+  </div>
+
+  <!-- Delete Modal -->
+  <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-label" aria-hidden="true">
+    <!-- Modal content... -->
+  </div>
+<div id="footer"></div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script>
+    var selectAllCheckbox = $('#select-all-checkbox');
+
+selectAllCheckbox.change(function () {
+  var isChecked = selectAllCheckbox.is(':checked');
+  $('.entry-checkbox').prop('checked', isChecked);
+});
+
+$('.entry-checkbox').change(function () {
+  var allCheckboxes = $('.entry-checkbox');
+  selectAllCheckbox.prop('checked', allCheckboxes.length === allCheckboxes.filter(':checked').length);
+});
+
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+      $(function(){
+        $("#header").load("../Components/header.html"); 
+        $("#footer").load("../Components/footer.html"); 
+        $("#sidebar").load("../Components/sidebar.html");
+      });
+  </script>
+</body>
+</html>
