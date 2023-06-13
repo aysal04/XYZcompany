@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Items Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .nav-link.active {
+      background-color: blue;
+      color: white;
+    }
+
+    .form-section {
+      display: none;
+    }
+
+    .form-section.active {
+      display: block;
+    }
+    #main{
+      width: 83vw;
+      box-sizing: border-box;
+      right: 0;
+      margin-right: 0;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="header"></div>
+  <div id="main">
+    <div class="container mt-4">
+        <h2>New Item</h2>
+        <form>
+          <div class="form-group row">
+            <label for="type" class="col-sm-2 col-form-label">Type</label>
+            <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="type" id="goods" value="goods">
+                <label class="form-check-label" for="goods">Goods</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="type" id="service" value="service">
+                <label class="form-check-label" for="service">Service</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="salutation" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-md-2">
+              <select class="form-control" id="salutation">
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+                <option value="miss">Miss</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="first-name" placeholder="First Name">
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="sku" class="col-md-2 col-form-label">SKU</label>
+            <div class="col-md-3">
+              <input type="text" class="form-control" id="sku" placeholder="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="unit" class="col-sm-2 col-form-label">Unit</label>
+            <div class="col-md-3">
+            <select class="form-control" id="unit">
+                <option value="option1">DOZEN</option>
+                <option value="option2">BOX</option>
+                <option value="option3">GRAMS</option>
+                <option value="option3">KILOGRAMS</option>
+                <option value="option3">METERS</option>
+                <option value="option3">TABLETS</option>
+                <option value="option3">UNITS</option>
+                <option value="option3">PIECES</option>
+            </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="digital-service" value="digital-service">
+                <label class="form-check-label" for="digital-service">Is it a digital service</label>
+                </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="hsn-code" class="col-sm-2 col-form-label">HSN Code/SAC</label>
+            <div class="col-md-3">
+              <input type="hsn-code" class="form-control" id="hsn-code" placeholder="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="tax-preference" class="col-sm-2 col-form-label">Tax Preference</label>
+            <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tax-preference" id="taxable" value="taxable">
+                <label class="form-check-label" for="taxable">Taxable</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tax-preference" id="non-taxable" value="non-taxable">
+                <label class="form-check-label" for="non-taxable">Non-Taxable</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="tax" class="col-sm-2 col-form-label">If non-taxable, Exemption Reason</label>
+            <div class="col-md-3">
+            <select class="form-control" id="tax">
+                <option value="option1">Delaware</option>
+                <option value="option2">White</option>
+            </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-sm-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="sales-info-checkbox">
+                <label class="form-check-label" for="sales-info-checkbox">Sales Information</label>
+              </div>
+              <div class="form-group row">
+                <label for="sp" class="col-sm-4 col-form-label">Selling Price</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="sp" placeholder="INR">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="account" class="col-sm-4 col-form-label">Account</label>
+                <div class="col-sm-8">
+                  <select class="form-control" id="account">
+                    <option value="option1">Discount</option>
+                    <option value="option2">General Income</option>
+                    <option value="option3">Interest Income</option>
+                    <option value="option3">Late Fee Income</option>
+                    <option value="option3">Other Charges</option>
+                    <option value="option3">Sales</option>
+                    <option value="option3">Shipping Charge</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="description" class="col-sm-4 col-form-label">Description</label>
+                <div class="col-sm-8">
+                  <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-sm-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="purchase-info-checkbox">
+                <label class="form-check-label" for="purchase-info-checkbox">Purchase Information</label>
+              </div>
+              <div class="form-group row">
+                <label for="cp" class="col-sm-4 col-form-label">Cost Price</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="cp" placeholder="INR">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="account" class="col-sm-4 col-form-label">Account</label>
+                <div class="col-sm-8">
+                  <select class="form-control" id="account">
+                    <option value="option1">Advertising and Marketing</option>
+                    <option value="option2">Automobile Expense</option>
+                    <option value="option3">Bad Debt</option>
+                    <option value="option3">Bank Fees and Charges</option>
+                    <option value="option3">Consultant Expense</option>
+                    <option value="option3">Credit Card Charges</option>
+                    <option value="option3">Depreciation Expense</option>
+                    <option value="option3">IT and Internet Expenses</option>
+                    <option value="option3">Janitorial Expense</option>
+                    <option value="option3">Lodging</option>
+                    <option value="option3">Meals and Entertainment</option>
+                    <option value="option3">Office Supplies</option>
+                    <option value="option3">Other Expenses</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="description" class="col-sm-4 col-form-label">Description</label>
+                <div class="col-sm-8">
+                  <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </form>
+      </div>
+
+      <div class="form-row justify-content-center">
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-primary btn-block">Save</button>
+        </div>
+        <div class="col-sm-2">
+          <button type="button" class="btn btn-secondary btn-block">Cancel</button>
+        </div>
+      </div>
+  </div>
+</div>
+<div id="footer"></div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.nav-link').click(function(e) {
+        e.preventDefault();
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+        var target = $(this).attr('href');
+        $('.form-section').removeClass('active');
+        $(target).addClass('active');
+      });
+    });
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+      $(function(){
+        $("#header").load("../Components/header.html"); 
+        $("#footer").load("../Components/footer.html"); 
+        $("#sidebar").load("../Components/sidebar.html");
+      });
+  </script>
+</body>
+</html>

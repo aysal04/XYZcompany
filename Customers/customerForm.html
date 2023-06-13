@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Sliding Bar</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+      background-color: rgba(241, 241, 241, 0.537);
+    }
+    .nav-link.active {
+      background-color: blue;
+      color: rgb(212, 130, 130);
+    }
+
+    .form-section {
+      display: none;
+    }
+
+    .form-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>New Customer</h2>
+        <form>
+          <div class="form-group row">
+            <label for="customer-type" class="col-sm-2 col-form-label">Customer Type</label>
+            <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="business" value="business">
+                <label class="form-check-label" for="business">Business</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="individual" value="individual">
+                <label class="form-check-label" for="individual">Individual</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="salutation" class="col-sm-2 col-form-label">Primary Contact</label>
+            <div class="col-sm-2">
+              <select class="form-control" id="salutation">
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+                <option value="miss">Miss</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="first-name" placeholder="First Name">
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="company-name" class="col-sm-2 col-form-label">Company Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="company-name" placeholder="Company Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="display-name" class="col-sm-2 col-form-label">Customer Display Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="display-name" placeholder="Customer Display Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="customer-email" class="col-sm-2 col-form-label">Customer Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="customer-email" placeholder="Customer Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="customer-phone" class="col-sm-2 col-form-label">Customer Phone</label>
+            <div class="col-sm-5">
+              <input type="tel" class="form-control" id="workphone" placeholder="Workphone">
+            </div>
+            <div class="col-sm-5">
+              <input type="tel" class="form-control" id="mobile" placeholder="Mobile">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="website" class="col-sm-2 col-form-label">Website</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="website" placeholder="Website">
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    <div class="container mt-4">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#other-details">Other Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#address">Address</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact-persons">Contact Persons</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#custom-fields">Custom Fields</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#reporting-tags">Reporting Tags</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#remarks">Remarks</a>
+      </li>
+    </ul>
+
+    <form id="other-details" class="form-section active mt-4">
+      <h5>Other Details</h5>
+      <!-- Form fields for Other Details section -->
+
+      <div class="form-group row">
+        <label for="gst-treatment" class="col-sm-2 col-form-label">GST Treatment</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="gst-treatment">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="place-of-supply" class="col-sm-2 col-form-label">Place Of Supply</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="place-of-supply">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Tax Preference</label>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="taxable" value="taxable">
+            <label class="form-check-label" for="taxable">Taxable</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="tax-exempt" value="tax-exempt">
+            <label class="form-check-label" for="tax-exempt">Tax Exempt</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="currency" class="col-sm-2 col-form-label">Currency</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="currency">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2">Enable Portal</div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="enable-portal" value="enable-portal">
+            <label class="form-check-label" for="enable-portal">Enable Portal</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="portal-language" class="col-sm-2 col-form-label">Portal Language</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="portal-language">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="twitter" class="col-sm-2 col-form-label">Twitter</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="twitter" placeholder="Twitter">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="facebook" class="col-sm-2 col-form-label">Facebook</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+        </div>
+      </div>
+    </form>
+
+    <form id="address" class="form-section mt-4">
+      <h5>Billing Address</h5>
+      <!-- Form fields for Address section -->
+
+
+
+
+
+
+      <div class="form-group row">
+        <label for="Attention" class="col-sm-2 col-form-label">Attention</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Attention" placeholder="Attention">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Country" class="col-sm-2 col-form-label">Country</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="Country">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label for="Address" class="col-sm-2 col-form-label">Address</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Address" placeholder="Street 1">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Address" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+        
+        <input type="text" class="form-control" id="Address" placeholder="Street 2">
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label for="City" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="City" placeholder="City">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="State" class="col-sm-2 col-form-label">State</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="State" placeholder="State">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="ZipCode" class="col-sm-2 col-form-label">ZipCode</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="ZipCode" placeholder="ZipCode">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Phone" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Phone" placeholder="Phone">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Fax" class="col-sm-2 col-form-label">Fax</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Fax" placeholder="Fax">
+        </div>
+      </div>
+
+      <h5>Shipping Address</h5>
+      <!-- Form fields for Address section -->
+
+
+
+
+
+
+      <div class="form-group row">
+        <label for="Attention" class="col-sm-2 col-form-label">Attention</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Attention" placeholder="Attention">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Country" class="col-sm-2 col-form-label">Country</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="Country">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label for="Address" class="col-sm-2 col-form-label">Address</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Address" placeholder="Street 1">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Address" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+        
+        <input type="text" class="form-control" id="Address" placeholder="Street 2">
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label for="City" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="City" placeholder="City">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="State" class="col-sm-2 col-form-label">State</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="State" placeholder="State">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="ZipCode" class="col-sm-2 col-form-label">ZipCode</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="ZipCode" placeholder="ZipCode">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Phone" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Phone" placeholder="Phone">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Fax" class="col-sm-2 col-form-label">Fax</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Fax" placeholder="Fax">
+        </div>
+      </div>
+</form>
+
+    <form id="contact-persons" class="form-section mt-4">
+      <h5>Contact Persons</h5>
+      <!-- Form fields for Contact Persons section -->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Salutation</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Work Phone</th>
+            <th>Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select class="form-control">
+                <option>Select</option>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Ms.</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="First Name">
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Last Name">
+            </td>
+            <td>
+              <input type="email" class="form-control" placeholder="Email Address">
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Work Phone">
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Mobile">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select class="form-control">
+                <option>Select</option>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Ms.</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="First Name">
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Last Name">
+            </td>
+            <td>
+              <input type="email" class="form-control" placeholder="Email Address">
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Work Phone">
+            </td>
+            <td>
+              <input type="text" class="form-control" placeholder="Mobile">
+            </td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <form id="custom-fields" class="form-section mt-4">
+      <h5>Custom Fields</h5>
+      <!-- Form fields for Custom Fields section -->
+
+      <p>Start adding custom fields for your contacts by going to Settings  Preferences  Customers and Vendors. You can add as many as Ten extra fields, as well as refine the address format of your customers from there.</p>
+
+    </form>
+
+    <form id="reporting-tags" class="form-section mt-4">
+      <h5>Reporting Tags</h5>
+      <!-- Form fields for Reporting Tags section -->
+    </form>
+
+    <form id="remarks" class="form-section mt-4">
+      <h5>Remarks</h5>
+      <!-- Form fields for Remarks section -->
+
+      
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="facebook" placeholder="Remarks">
+        </div>
+      </div>
+    </form>
+
+    <div >
+      <button type="submit" class="btn btn-primary">Submit</button>
+      
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.nav-link').click(function(e) {
+        e.preventDefault();
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+        var target = $(this).attr('href');
+        $('.form-section').removeClass('active');
+        $(target).addClass('active');
+      });
+    });
+  </script>
+</body>
+</html>

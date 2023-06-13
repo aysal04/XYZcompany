@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/60632f752f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="header"></div>
+  <div class="container mt-4">
+    <h2 class="mb-4">All Items</h2>
+
+    <!-- Create Form -->
+    
+    <button type="submit" class="btn btn-primary">+NEW</button>
+    <hr>
+
+    <!-- Table -->
+    <table class="table table-striped" id="data-table">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="select-all-checkbox"></th>
+          <th>NAME</th>
+          <th>DESCRIPTION</th>
+          <th>RATE</th>
+          <th>STOCK ON HAND</th>
+          <th>HSN/SAC</th>
+          <th>USAGE UNIT</th>
+          <th><i class="fas fa-search"></i></th>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 0</td>
+          <td>Item 0- Sales Description</td>
+          <td>&#x20B9 951.00</td>
+          <td></td>
+          <td>30585</td>
+          <td>Mtr</td>
+          <td></td>  
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 1</td>
+          <td>Item 1 - Sales Description</td>
+          <td>&#x20B9 440.00</td>
+          <td></td>
+          <td>11234</td>
+          <td>Pcs</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>30967</td>
+          <td>Kg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>77340</td>
+          <td>Kg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 4</td>
+          <td>Item 4 - Sales Description</td>
+          <td>&#x20B9 938.00</td>
+          <td></td>
+          <td>47886</td>
+          <td>Ltr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 5</td>
+          <td>Item 5 - Sales Description</td>
+          <td>&#x20B9 728.00</td>
+          <td></td>
+          <td>40052</td>
+          <td>Pcs</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 6</td>
+          <td>Item 6 - Sales Description</td>
+          <td>&#x20B9 135.00</td>
+          <td>255</td>
+          <td>97938</td>
+          <td>Kg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="entry-checkbox"></td>
+          <td>Item 7</td>
+          <td>Item 7 - Sales Description</td>
+          <td>&#x20B9 27.00</td>
+          <td>337</td>
+          <td>23076</td>
+          <td>Ltr</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+    <!-- Modal content... -->
+  </div>
+
+  <!-- Delete Modal -->
+  <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-label" aria-hidden="true">
+    <!-- Modal content... -->
+  </div>
+
+<div id="footer"></div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script>
+    var selectAllCheckbox = $('#select-all-checkbox');
+
+selectAllCheckbox.change(function () {
+  var isChecked = selectAllCheckbox.is(':checked');
+  $('.entry-checkbox').prop('checked', isChecked);
+});
+
+$('.entry-checkbox').change(function () {
+  var allCheckboxes = $('.entry-checkbox');
+  selectAllCheckbox.prop('checked', allCheckboxes.length === allCheckboxes.filter(':checked').length);
+});
+
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+      $(function(){
+        $("#header").load("../Components/header.html"); 
+        $("#footer").load("../Components/footer.html"); 
+        $("#sidebar").load("../Components/sidebar.html");
+      });
+  </script>
+</body>
+</html>

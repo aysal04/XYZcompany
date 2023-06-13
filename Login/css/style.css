@@ -1,0 +1,82 @@
+body {
+    background-image: url('/img/bgimg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: rgb(217, 222, 226);
+    /* height: 2000px; */
+}
+
+.special_font {
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 2rem;
+}
+.resume {
+    margin: 25px;
+}
+.explore {
+    display: inline-block;
+}
+.explore a:hover {
+    text-decoration: rgba(0, 0, 0, 0.3) underline;
+}
+.header_content {
+    padding-left: 8%;
+    padding-top: 15px;
+    font-size: 18px;
+    position: fixed;
+}
+.explore a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+.intro_container {
+    padding-left: 13rem;
+    padding-top: 5rem;
+    text-align: center;
+    display: inline-block;
+}
+.intro_container .name {
+    font-size: 8rem;
+    /* word-spacing: 2rem; */
+}
+.intro_content{
+    color: rgba(0, 0, 0, 0.70);
+    margin-top: 51px;
+    word-spacing: 1px;
+    line-height: 130%;
+    height: 600%;
+}
+.qualifications{
+    height: 100px;
+    /* background-color: yellow; */
+}
+
+.intro_container form input, button {
+    width: 310px;
+    height: 43px;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(216, 210, 210);
+}
+
+.intro_container form button {
+    width: 310px;
+    height: 50px;
+}
+
+.intro_container form button:hover {
+    background-color: rgba(0, 0, 0, 0.15);;
+    cursor:pointer;
+}
+
+.intro_container form div p {
+    display: inline;
+}
+.header_content img{
+    height: 50px;
+}
