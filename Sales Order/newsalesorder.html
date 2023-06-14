@@ -15,16 +15,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <span class="resume special_font">XYZ Company </span>
-            <div class="explore">
-                <a href="index.html">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
-        </div>
-    </header>
+    <div id="sidebar"></div>
+    <div id="header"></div>
     <div class="container" style="padding-top: 30px;">
         <h1>New Sales Order</h1>
         <div class="form-group">
@@ -168,6 +160,18 @@
             input.addEventListener('input', function() {
                 calculateAmount(this);
             });
+        });
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+    <script> 
+        $(function(){
+          $("#header").load("../Components/header.html"); 
+          $("#footer").load("../Components/footer.html"); 
+          $("#sidebar").load("../Components/sidebar.html");
         });
     </script>
 </body>
