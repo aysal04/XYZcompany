@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget Form</title>
+  <link rel="stylesheet" type="text/css" href="css\budgetform.css">
+</head>
+<body>
+
+  <div id="sidebar"></div>
+  <div id="header"></div>
+  <h1>Budget Form</h1>
+
+  <form class="budget-form">
+    <div class="form-group">
+      <label for="item">Budget Name</label>
+      <input type="text" id="item" name="item" required>
+    </div>
+    <div class="form-group">
+      <label for="amount">Budget Amount</label>
+      <input type="number" id="amount" name="amount" required>
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">Select a category</option>
+        <option value="food">Food</option>
+        <option value="transportation">Transportation</option>
+        <option value="utilities">Utilities</option>
+        <option value="entertainment">Entertainment</option>
+        
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+  <div>
+    <a href="budget.html" class="btn">Go back</a>
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+      $(function(){
+        $("#header").load("../Components/header.html"); 
+        $("#footer").load("../Components/footer.html"); 
+        $("#sidebar").load("../Components/sidebar.html");
+      });
+  </script>
+</body>
+</html>

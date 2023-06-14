@@ -19,22 +19,35 @@
             width: 100px; /* Adjust the width as desired */
             height: 75px; /* Maintain aspect ratio */
         }
+        .nav-link active{
+          margin-left: 100px;
+        }
     </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <div class="logo">
-            <img src="../Images/logo.jpeg">
-          </div>
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!--these 3 extra recents are to create margin-->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="color: #888;">Create</a>
+                <a class="nav-link" href="#" style="color: #888;">Recents</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: #888;">Recents</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: #888;">Recents</a>
+              </li>
+              <!---->
+              
+              <a class="nav-link active" aria-current="page" href="#" style="color: #888;">Create</a>
+              </li>
+              <li class="nav-item">
               <li class="nav-item">
                 <a class="nav-link" href="#" style="color: #888;">Recents</a>
               </li>
