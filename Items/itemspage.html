@@ -37,272 +37,129 @@
 	<!--google material icon-->
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <style>
-          body{
+          #body{
             margin-left: 17%;
           }
         </style>
 </head>
 <body>
-  <div class="wrapper">
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <img src="../Images/logo.jpeg" class="img-fluid"/>
-        </div>
-        <ul class="list-unstyled components">
-          <div class="small-screen navbar-display">
-            <li  class="active">
-                <a href="../Dashboard/dashboard.html" class="dashboard"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
-            </li>
-            <li  class="active">
-                <a href="../Dashboard/dashboard.html" class="dashboard"><i class="material-icons">dashboard</i><span>Items</span></a>
-            </li>
-            <li  class="active">
-                <a href="../Dashboard/dashboard.html" class="dashboard"><i class="material-icons">dashboard</i><span>Banking</span></a>
-            </li>
-            <li class="dropdown d-lg-none d-md-block d-xl-none d-sm-block">
-                <a href="#homeSubmenu0" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="material-icons">notifications</i><span> 4 notification</span></a>
-                <ul class="collapse list-unstyled menu" id="homeSubmenu0">
-                                <li>
-                                <a href="#">You have 5 new messages</a>
-                                </li>
-                                <li>
-                                    <a href="#">You're now friend with Mike</a>
-                                </li>
-                                <li>
-                                    <a href="#">Wish Mary on her birthday!</a>
-                                </li>
-                                <li>
-                                    <a href="#">5 warnings in Server Console</a>
-                                </li>
-                </ul>
-            </li>
-            
-             <li  class="d-lg-none d-md-block d-xl-none d-sm-block">
-                <a href="#"><i class="material-icons">person</i><span>user</span></a>
-            </li>
-            
-            <li  class="d-lg-none d-md-block d-xl-none d-sm-block">
-                <a href="#"><i class="material-icons">settings</i><span>setting</span></a>
-            </li>
-            </div>
-        
-        
-            <li class="dropdown">
-                <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="material-icons">cases</i><span>Sales</span></a>
-                <ul class="collapse list-unstyled menu" id="homeSubmenu1">
-                    <li>
-                        <a href="../Customers/customerPage.html">Customers</a>
-                    </li>
-                    <li>
-                        <a href="../Sales Order/salesorder.html">Sales Order</a>
-                    </li>
-                    <li>
-                        <a href="../Invoices/invoiceform.html">Invoices</a>
-                    </li>
-                    <li>
-                        <a href="../Delivery Challan/deliveryChallan.html">Delivery challans</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="material-icons">cases</i><span>Purchases</span></a>
-                <ul class="collapse list-unstyled menu" id="homeSubmenu1">
-                    <li><a href="../Vendors and Expenses/vendors.html">Vendors</a></li>
-                    <li><a href="../Vendors and Expenses/expenses.html">Expenses</a></li>
-                    <li><a href="../Purchase Orders/PuchaseForm.html">Purchase Orders</a></li>
-                </ul>
-            </li>
-             <li class="dropdown">
-                <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="material-icons">apartment</i><span>Accountant</span></a>
-                <ul class="collapse list-unstyled menu" id="pageSubmenu3">
-                    <li><a href="../Manual Journal/manualjournal.html">Manual Journals</a></li>
-                    <li><a href="../Currency Converter/currencyconverter.html">Currency Converter</a></li>
-                </ul>
-            </li>
-            <li  class="">
-                <a href="../Reports/reportpage.html"><i class="material-icons">help</i><span>Reports</span></a>
-            </li>
-            <li  class="">
-                <a href="#"><i class="material-icons">help</i><span>Support</span></a>
-            </li>
-            <li  class="">
-                <a href="#"><i class="material-icons">call</i><span>Contact us</span></a>
-            </li>   
-        </ul>
-    </nav>
-</div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../Sidebar Js/jquery-3.3.1.slim.min.js"></script>
-    <script src="../Sidebar Js/popper.min.js"></script>
-    <script src="../Sidebar Js/bootstrap.min.js"></script>
-    <script src="../Sidebar Js/jquery-3.3.1.min.js"></script>
-   
-   
-   <script type="text/javascript">
-     let ctx = document.getElementById("myChart").getContext("2d");
-     let myChart = new Chart(ctx, {
-         type: "line",
-         data: {
-             labels: [
-                 "Monday",
-                 "Tuesday",
-                 "Wednesday",
-                 "Thursday",
-                 "Friday",
-                 "Saturday",
-                 "Sunday",
-             ],
-             datasets: [
-                 {
-                     label: "income",
-                     data: [2, 9, 3, 17, 6, 3, 7],
-                     backgroundColor: "rgba(167, 236, 238, 0.6)",
-                 },
-                 {
-                     label: "expenses",
-                     data: [2, 2, 5, 5, 2, 1, 10],
-                     backgroundColor:"rgba(154, 197, 244, 0.6)",
-                 },
-             ],
-         },
-     });
-   $(document).ready(function () {
-             $('#sidebarCollapse').on('click', function () {
-                 $('#sidebar').toggleClass('active');
-                 $('#content').toggleClass('active');
-             });
-             
-              $('.more-button,.body-overlay').on('click', function () {
-                 $('#sidebar,.body-overlay').toggleClass('show-nav');
-             });
-             
-         });
- </script>
+  
 
 
   <div id="header"></div>
-  <div class="container mt-4">
-    <h2 class="mb-4">All Items</h2>
-
-    <!-- Create Form -->
-    
-    <button type="submit" class="btn btn-primary"><a href="newitemsform.html">+NEW</a></button>
-    <hr>
-
-    <!-- Table -->
-    <table class="table table-striped" id="data-table">
-      <thead>
-        <tr>
-          <th><input type="checkbox" id="select-all-checkbox"></th>
-          <th>NAME</th>
-          <th>DESCRIPTION</th>
-          <th>RATE</th>
-          <th>STOCK ON HAND</th>
-          <th>HSN/SAC</th>
-          <th>USAGE UNIT</th>
-          <th><i class="fas fa-search"></i></th>  
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 0</td>
-          <td>Item 0- Sales Description</td>
-          <td>&#x20B9 951.00</td>
-          <td></td>
-          <td>30585</td>
-          <td>Mtr</td>
-          <td></td>  
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 1</td>
-          <td>Item 1 - Sales Description</td>
-          <td>&#x20B9 440.00</td>
-          <td></td>
-          <td>11234</td>
-          <td>Pcs</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 2</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>30967</td>
-          <td>Kg</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 3</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>77340</td>
-          <td>Kg</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 4</td>
-          <td>Item 4 - Sales Description</td>
-          <td>&#x20B9 938.00</td>
-          <td></td>
-          <td>47886</td>
-          <td>Ltr</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 5</td>
-          <td>Item 5 - Sales Description</td>
-          <td>&#x20B9 728.00</td>
-          <td></td>
-          <td>40052</td>
-          <td>Pcs</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 6</td>
-          <td>Item 6 - Sales Description</td>
-          <td>&#x20B9 135.00</td>
-          <td>255</td>
-          <td>97938</td>
-          <td>Kg</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="entry-checkbox"></td>
-          <td>Item 7</td>
-          <td>Item 7 - Sales Description</td>
-          <td>&#x20B9 27.00</td>
-          <td>337</td>
-          <td>23076</td>
-          <td>Ltr</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-
+  <div id="sidebar"></div>
+  <div id="body">
+    <div class="container mt-4">
+      <h2 class="mb-4">All Items</h2>
+  
+      <!-- Create Form -->
+      
+      <button type="submit" class="btn btn-primary"><a href="newitemsform.html">+NEW</a></button>
+      <hr>
+  
+      <!-- Table -->
+      <table class="table table-striped" id="data-table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="select-all-checkbox"></th>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+            <th>RATE</th>
+            <th>STOCK ON HAND</th>
+            <th>HSN/SAC</th>
+            <th>USAGE UNIT</th>
+            <th><i class="fas fa-search"></i></th>  
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 0</td>
+            <td>Item 0- Sales Description</td>
+            <td>&#x20B9 951.00</td>
+            <td></td>
+            <td>30585</td>
+            <td>Mtr</td>
+            <td></td>  
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 1</td>
+            <td>Item 1 - Sales Description</td>
+            <td>&#x20B9 440.00</td>
+            <td></td>
+            <td>11234</td>
+            <td>Pcs</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>30967</td>
+            <td>Kg</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>77340</td>
+            <td>Kg</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 4</td>
+            <td>Item 4 - Sales Description</td>
+            <td>&#x20B9 938.00</td>
+            <td></td>
+            <td>47886</td>
+            <td>Ltr</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 5</td>
+            <td>Item 5 - Sales Description</td>
+            <td>&#x20B9 728.00</td>
+            <td></td>
+            <td>40052</td>
+            <td>Pcs</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 6</td>
+            <td>Item 6 - Sales Description</td>
+            <td>&#x20B9 135.00</td>
+            <td>255</td>
+            <td>97938</td>
+            <td>Kg</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="entry-checkbox"></td>
+            <td>Item 7</td>
+            <td>Item 7 - Sales Description</td>
+            <td>&#x20B9 27.00</td>
+            <td>337</td>
+            <td>23076</td>
+            <td>Ltr</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
   </div>
+  
 
-  <!-- Edit Modal -->
-  <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
-    <!-- Modal content... -->
-  </div>
-
-  <!-- Delete Modal -->
-  <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-label" aria-hidden="true">
-    <!-- Modal content... -->
-  </div>
-
+ 
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
