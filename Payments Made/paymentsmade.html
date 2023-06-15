@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Page</title>
+    <link rel="stylesheet" href="css\payementsmade.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="sidebar"></div>
+    <div id="header"></div>
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <a href="newpayments.html">
+        <button type="button" class="btn btn-primary">New Vendor</button>
+      </a>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" id="select-all">
+            <label for="select-all"></label>
+          </th>
+          <th>DATE</th>
+          <th>PAYMENT #</th>
+          <th>REFERENCE#</th>
+          <th>VENDOR NAME</th>
+          <th>BILL#</th>
+          <th>MODE</th>
+          <th>AMOUNT</th>
+          <th>UNUSED AMOUNT</th>
+        </tr>
+      </thead>
+
+    </table>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+      $(function(){
+        $("#header").load("../Components/header.html"); 
+        $("#footer").load("../Components/footer.html"); 
+        $("#sidebar").load("../Components/sidebar.html");
+      });
+  </script>
+</body>
+</html>
