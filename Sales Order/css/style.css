@@ -1,12 +1,3 @@
-body {
-    background-image: url(/Users/raja/Desktop/GIT/XYZcompany/img/bgimg.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: rgb(217, 222, 226);
-    /* height: 2000px; */
-}
 
 .special_font {
     font-family: 'Libre Caslon Display', serif;
@@ -88,18 +79,6 @@ h1 {
     text-align: center;
   }
   
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .button:hover {
-    background-color:  rgba(0, 0, 0, 0.15);
-  }
   .unpaid{
     margin-bottom: 20px;
     text-align: center;
@@ -136,12 +115,12 @@ h1 {
 
 h1 {
     font-family: 'Libre Caslon Display', serif;
-    text-align: center;
     margin-bottom: 30px;
 }
 
 .form-group {
     margin-bottom: 20px;
+    max-width: 600px;
 }
 
 label {
@@ -186,7 +165,7 @@ textarea {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #dc3545;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -194,7 +173,27 @@ textarea {
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #b33b47;
+}
+
+.button1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #b33b47;
 }
 
 header {
@@ -209,6 +208,6 @@ header {
 }
 
 .container {
-    max-width: 600px;
+    max-width: full screen;
     margin: 0 auto;
 }

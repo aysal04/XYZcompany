@@ -5,126 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-image: url(/Users/raja/Desktop/GIT/XYZcompany/img/bgimg.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: rgb(217, 222, 226);
-      margin: 0;
-      padding: 0;
-    }
-    
-    header {
-      background-color: white;
-      color: #000;
-      padding: 20px;
-    }
-    
-    .header_content {
-      padding-left: 10%;
-    font-size: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .resume {
-      font-family: 'Libre Caslon Display', serif;
-      font-size: 2rem;
-    }
-    
-    .explore a {
-      color: #000;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-    
-    .payment_details {
-      margin: 50px auto;
-      max-width: 800px;
-      padding: 20px;
-      background-color: #f5f5f5;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .payment_details h1 {
-      font-family: 'Libre Caslon Display', serif;
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-    
-    .options {
-      margin-bottom: 20px;
-    }
-    
-    .options .button {
-      margin-right: 10px;
-      font-size: 16px;
-      padding: 10px 20px;
-    }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-    
-    th {
-      background-color: #f9f9f9;
-      padding: 10px;
-      cursor: pointer;
-    }
-    
-    td {
-      padding: 10px;
-      text-align: center;
-    }
-    
-    .unpaid {
-      margin-bottom: 20px;
-    }
-    
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
-    
-    .button.refresh {
-      background-color: #2196F3;
-    }
-    
-    .button:hover {
-      opacity: 0.8;
-    }
-    
-    .no-payment {
-      font-style: italic;
-      color: #999;
-      margin-bottom: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Sales Order/css/style.css">
 </head>
 <body>
   <header>
     <div id="sidebar"></div>
     <div id="header"></div>
 
-  <div class="payment_details">
+  <div class="payment_details" style="margin-left: 10%;">
     <h1 style="text-align: center;">Payment Received</h1>
 
     <div class="options" style="text-align: center;">
-      <button class="button" onclick="addPayment()">Add New Payment</button>
-      <button class="button refresh" onclick="refreshPage()">Refresh List</button>
+      <button class="button" onclick="addPayment()" style="float: left;">Add New Payment</button>
+      <button onclick="refreshPage()" class="button refresh" style="font-size:13px padding-bottom 1rem;"><i class="fa fa-refresh"></i></button>
       <button class="button refresh" onclick="sortList()">Sort List</button>
     </div>
 
@@ -144,8 +38,10 @@
 
     <!-- <p class="no-payment" id="noPaymentText">No payment details available</p> -->
 
-    <div style="text-align: center;">
+    <div style="text-align: center; padding-top: 0.5rem;">
       <a class="button" href="unpaid_payments.html">Go to Unpaid Invoices</a>
+    </div>
+    <div style="text-align: center; padding-top: 0.5rem;">
       <a class="button" href="import_payments.html">Import Payments</a>
     </div>
 
