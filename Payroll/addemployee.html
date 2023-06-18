@@ -6,15 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-        <sidebar class="sidebar">
-            <h1 class="heading">Payroll</h1>
-            <a>Dashboard</a>
-            <a href="employees.html" id="employee">Employees</a>
-            <a>Payruns</a>
-            <a>Form 16</a>
-            <a>Reports</a>
-            <a>Settings</a>
-        </sidebar>
+        <div id="sidebar"></div>
+        <div id="header"></div>
 
         <section class="form">
             <h1 class="heading1">Add Employee</h1>
@@ -127,5 +120,18 @@
                         }
                 </script>
         </section>
+
+        <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+    <script> 
+        $(function(){
+          $("#header").load("../Components/header.html"); 
+          $("#footer").load("../Components/footer.html"); 
+          $("#sidebar").load("../Components/sidebar.html");
+        });
+    </script>
 </body>
 </html>
