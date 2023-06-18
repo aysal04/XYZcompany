@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Delivery Challan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="sidebar"></div>
+        <div id="header"></div>
+
+        <div class="container-fluid">
+            <div>
+                <h1 style="text-align: center;">Delivery Challan</h1>
+
+                <div class="options" style="text-align: center;">
+                    <button class="button" onclick="addNew()" style="float: left;">Add New</button>
+
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="sort">DATE</th>
+                            <th class="sort">DELIVERY CHALLAN#</th>
+                            <th class="sort">REFERENCE#</th>
+                            <th class="sort">CUSTOMER NAME</th>
+                            <th class="sort">STATUS</th>
+                            <th class="sort">INVOICE STATUS</th>
+                            <th class="sort">AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="deliveryChallanList">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <p class="no" id="noText">No details available</p> -->
+
+
+
+        <script>
+
+            function addNew() {
+                alert('Adding new Delivery Challan...');
+            }
+
+
+
+            var deliveryChallanData = [
+                { date: '2023-06-02', deliveryChallanNo: 'DC-000', referenceNo: '19997', customerName: 'abc', status: 'DRAFT', invoiceStatus: 'OPEN', amount: 8400.00, },
+                { date: '2023-06-03', deliveryChallanNo: 'DC-000', referenceNo: '28780', customerName: 'xyz', status: 'OPEN', invoiceStatus: 'DELIVERED', amount: 954.00, },
+                { date: '2023-06-01', deliveryChallanNo: 'DC-000', referenceNo: '93531', customerName: 'mno', status: 'RETURNED', invoiceStatus: 'DRAFT', amount: 600.00, },
+                { date: '2023-06-03', deliveryChallanNo: 'DC-000', referenceNo: '60780', customerName: 'qrs', status: 'DELIVERED', invoiceStatus: 'RETURNED', amount: 6765.00, }
+            ];
+
+            var deliveryChallanList = document.getElementById('deliveryChallanList');
+            var noText = document.getElementById('noText');
+
+            if (deliveryChallanData.length === 0) {
+                noText.style.display = 'block';
+            } else {
+                deliveryChallanData.forEach(function (dc) {
+                    var row = document.createElement('tr');
+                    row.innerHTML = '<td>' + dc.date + '</td>' +
+                        '<td>' + dc.deliveryChallanNo + '</td>' +
+                        '<td>' + dc.referenceNo + '</td>' +
+                        '<td>' + dc.customerName + '</td>' +
+                        '<td>' + dc.status + '</td>' +
+                        '<td>' + dc.invoiceStatus + '</td>' +
+                        '<td>' + dc.amount + '</td>';
+                    deliveryChallanList.appendChild(row);
+                });
+            }
+        </script>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+            </script>
+        <script>
+            $(function () {
+                $("#header").load("../Components/header.html");
+                $("#footer").load("../Components/footer.html");
+                $("#sidebar").load("../Components/sidebar.html");
+            });
+        </script>
+</body>
+
+</html>
