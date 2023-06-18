@@ -13,11 +13,11 @@
     <div id="sidebar"></div>
     <div id="header"></div>
 
-  <div class="payment_details" style="margin-left: 10%;">
+  <div class="payment_details" style="margin-left: 19%; margin-top: 50px;">
     <h1 style="text-align: center;">Payment Received</h1>
 
     <div class="options" style="text-align: center;">
-      <button class="button" onclick="addPayment()" style="float: left;">Add New Payment</button>
+      <a href="newpaymentform.html"><button class="button" style="float: left;">Add New Payment</button></a>
       <button onclick="refreshPage()" class="button refresh" style="font-size:13px padding-bottom 1rem;"><i class="fa fa-refresh"></i></button>
       <button class="button refresh" onclick="sortList()">Sort List</button>
     </div>
@@ -46,12 +46,6 @@
     </div>
 
     <script>
-      // JavaScript code for handling functionalities
-      function addPayment() {
-        // TODO: Implement adding new payment functionality
-        alert('Adding new payment...');
-      }
-
       function refreshPage() {
         location.reload();
       }

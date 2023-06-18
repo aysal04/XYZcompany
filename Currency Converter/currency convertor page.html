@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base Currency Adjustments</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    #body{
+      background-color: rgb(255, 255, 255);
+      margin-left: 17%;
+    }
+  
+  /* Styling the filter container */
+  .mb-3 {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Styling the filter label */
+  .mb-3 label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  /* Styling the filter select dropdown */
+  .mb-3 select {
+    width: 200px;
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+</style>
+
+ 
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="header"></div>
+  
+  <div id="body">
+    <div class="container mt-4">
+      <h2 class="mb-4">Base Currency Adjustments</h2>
+
+      
+
+      <!-- Make an Adjustment Button -->
+      <div class="d-flex justify-content-between mb-3">
+        <button type="submit" class="btn btn-primary"><a style="color: black;" href="curruency covertor form.html">+Make Adjustments</a></button>
+        
+      </div>
+      <!-- Filter Options -->
+      <div class="mb-3">
+        <label for="filter">Filter:</label>
+        <select id="filter" class="form-control">
+          <option value="all">All</option>
+          <option value="today">Today</option>
+          <option value="this-week">This Week</option>
+          <option value="this-month">This Month</option>
+          <option value="this-year">This Year</option>
+        </select>
+      </div>
+
+      <hr>
+
+      <!-- Table -->
+      <table class="table table-striped" id="data-table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="select-all-checkbox"></th>
+            
+            <th>Date</th>
+            <th>Amount to convert</th>
+            <th>Gain or loss</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td><input type="checkbox" class="entry-checkbox"></td>
+              
+              <td>12-06-2022</td>
+              <td>20000</td>
+              <td>gain</td>
+              <td>transction</td>
+              
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="entry-checkbox"></td>
+                
+                <td>12-03-2023</td>
+                <td>700000</td>
+                <td>loss</td>
+                <td>funds</td>
+                
+              </tr>
+
+      </table>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script>
+    var selectAllCheckbox = $('#select-all-checkbox');
+
+    selectAllCheckbox.change(function () {
+      var isChecked = selectAllCheckbox.is(':checked');
+      $('.entry-checkbox').prop('checked', isChecked);
+    });
+
+    $('.entry-checkbox').change(function () {
+      var allCheckboxes = $('.entry-checkbox');
+      selectAllCheckbox.prop('checked', allCheckboxes.length === allCheckboxes.filter(':checked').length);
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script> 
+    $(function(){
+      $("#header").load("../Components/header.html"); 
+      $("#footer").load("../Components/footer.html"); 
+      $("#sidebar").load("../Components/sidebar.html");
+    });
+  </script>
+</body>
+</html>
