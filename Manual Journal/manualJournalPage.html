@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Manual Journal</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="sidebar"></div>
+        <div id="header"></div>
+
+        <div class="container-fluid">
+            <div>
+                <h1 style="text-align: center;">Manual Journal</h1>
+
+                <div style="text-align: center;">
+                    <button class="button bg-secondary" onclick="addNew()" style="float: left;">Add
+                        New</button>
+
+                </div>
+
+                <table id="myTable">
+                    <thead>
+                        <tr>
+                            <th class="sort">DATE</th>
+                            <th class="sort">JOURNAL#</th>
+                            <th class="sort">REFERENCE#</th>
+                            <th class="sort">STATUS</th>
+                            <th class="sort">NOTES</th>
+                            <th class="sort">AMOUNT</th>
+                            <th class="sort">DOCUMENTS</th>
+                            <th class="sort">
+                                <form class="d-flex" style="width: 110px">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </form>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        <script>
+
+            function addNew() {
+                alert('Adding new Manual Journal...');
+            }
+
+
+            var dataSet = [
+                { date: '2023-06-02', manualJournalNo: 'DC-000', referenceNo: '19997', status: 'DRAFT', notes: '', amount: 8400.00, documents: '' },
+                { date: '2023-06-03', manualJournalNo: 'DC-000', referenceNo: '28780', status: 'OPEN', notes: '', amount: 954.00, documents: '' },
+                { date: '2023-06-01', manualJournalNo: 'DC-000', referenceNo: '93531', status: 'RETURNED', notes: '', amount: 600.00, documents: '' },
+                { date: '2023-06-03', manualJournalNo: 'DC-000', referenceNo: '60780', status: 'DELIVERED', notes: '', amount: 6765.00, documents: '' }
+            ];
+
+
+
+            var tableBody = document.getElementById("myTable").getElementsByTagName("tbody")[0];
+
+            for (var i = 0; i < dataSet.length; i++) {
+                var row = document.createElement("tr");
+
+                for (var prop in dataSet[i]) {
+                    if (dataSet[i].hasOwnProperty(prop)) {
+                        var td = document.createElement("td");
+                        var checkbox = document.createElement("input");
+                        checkbox.type = "checkbox";
+                        checkbox.id = "checkbox" + i;
+                        td.appendChild(checkbox);
+                        td.textContent = dataSet[i][prop];
+                        row.appendChild(td);
+                    }
+                }
+
+                tableBody.appendChild(row);
+            }
+
+
+
+        </script>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+            </script>
+        <script>
+            $(function () {
+                $("#header").load("../Components/header.html");
+                $("#footer").load("../Components/footer.html");
+                $("#sidebar").load("../Components/sidebar.html");
+            });
+        </script>
+</body>
+
+</html>
