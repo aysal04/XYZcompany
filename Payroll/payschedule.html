@@ -1,24 +1,18 @@
 <html>
 <head>
     <title>Pay Schedule</title>
-    <link rel="stylesheet" href="Payroll Css/payschedule.css">
+    <link rel="stylesheet" href="css/payschedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-        <sidebar class="sidebar">
-            <h1 class="heading">Payroll</h1>
-            <p>Dashboard</p>
-            <p id="employee">Employees</p>
-            <p>Payruns</p>
-            <p>Form 16</p>
-            <p>Reports</p>
-            <p>Settings</p>
-        </sidebar>
+    <div id="sidebar"></div>
+    <div id="header"></div>
+    
         <section class="form">
             <h1 class="heading1">Setup Pay Schedule</h1>
             <form action="payschedule.php">
-                Select your weekly workdays:<p>
+                Select your weekly workdays:
                 <div id="workWeekCheck">
                     <input type="checkbox" id="monday" name="monday" value="monday">
                     <label for="monday" class="weekdays"> Monday</label><br>
