@@ -2,108 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue buck</title>
-    <link rel="stylesheet" href="css\invoice.css">
+    <title>Sales Page</title>
+    <link rel="stylesheet" href="invoice.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="brand-section">
-            <div class="row">
-                <div class="col-6">
-                    <div >
-                        <img class="logo" src="img\blue buck.jpg" alt="Blue buck Logo">
-                    </div>
-                    <h1 class="text-white">Blue buck</h1>
-                </div>
-                <div class="col-6">
-                    <div class="company-details">
-                        <p class="text-white">Address:</p>
-                        <p class="text-white"></p>
-
-                        <p class="text-white">+91 XXXXXXXX</p>
-                    </div>
-                </div>
-            </div>
+    <div id="sidebar"></div>
+    <div id="header"></div>
+    <div class="container" style="margin-left: 18%; width: 82%;">
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          
+          <a href="invoiceform.html">
+            <button type="button" class="btn btn-primary">New Invoice</button>
+          </a>
         </div>
-
-        <div class="body-section">
-            <div class="row">
-                <div class="col-6">
-                    <h2 class="heading">Invoice No.: </h2>
-                    <p class="sub-heading">Tracking No.  </p>
-                    <p class="sub-heading">Order Date:  </p>
-                    <p class="sub-heading">Email Address: customer@BBmail.com </p>
-                </div>
-                <div class="col-6">
-                    <p class="sub-heading">Full Name:  </p>
-                    <p class="sub-heading">Address:  </p>
-                    <p class="sub-heading">Phone Number:  </p>
-                    <p class="sub-heading">Pincode:  </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="body-section">
-            <h3 class="heading">Ordered Items</h3>
-            <br>
-            <table class="table-bordered">
-                <thead>
-                    <tr>
-                        <th class="w-20">items</th>
-                        <th class="w-20">Description</th>
-                        <th class="w-20">Price</th>
-                        <th class="w-20">Quantity</th>
-                        <th class="w-20">Grandtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Product Name</td>
-                        
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                    </tr>
-                    <tr> 
-                        <td>Product Name</td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td></tr>
-                    <tr>
-                        <td colspan="4" class="text-right">Sub Total</td>
-                        <td> </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="text-right">Tax Total %1X</td>
-                        <td> </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="text-right">Grand Total</td>
-                        <td> </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <h4 class="heading">Payment Mode: </h4>
-            <p class="sub-footer">Have a nice day</p>
-            
-            
-            <p class="sub-footer">Thankyou </p>
-            <h3 class="sub-heading">Terms and conditions:</h3>
-            <p class="sub-footer">Customers can only return the Ordered 
-                items within 5 days with proper payment receipt</p>
-        </div>
-
-        <div class="body-section">
-            <p>&copy; Copyright 20xx - Bulebuck. All rights reserved. 
-                <a href="https://www.Bluebuckwesite.com/" class="float-right">www.BlueBuckwebit.com</a>
-            </p>
-        </div>      
-    </div>      
-
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="select-all">
+                        <label for="select-all"></label>
+                    </th>
+                    <th>DATE</th>
+                    <th>INVOICE #</th>
+                    <th>ORDER NUMBER</th>
+                    <th>CUSTOMER NAME</th>
+                    <th>STATUS</th>
+                    <th>DUE DATE</th>
+                    <th>AMOUNT</th>
+                    <th>BALANCE DUE</th>
+                    
+                </tr>
+            </thead>
+            <!-- Table content goes here -->
+        </table>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+      $(function(){
+        $("#header").load("../Components/header.html"); 
+        $("#footer").load("../Components/footer.html"); 
+        $("#sidebar").load("../Components/sidebar.html");
+      });
+  </script>
 </body>
 </html>
