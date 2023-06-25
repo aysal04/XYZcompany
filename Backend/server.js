@@ -22,7 +22,8 @@ app.use("/api/v1/auth",authRoute)
 
 
 app.get("/",function(req,res){
-    res.send("<h1>index</h1>");
+    const filePath = __dirname + '/index.html' ;
+    res.sendFile(filePath);
   });
 
 const PORT=process.env.PORT || 8000;
