@@ -279,7 +279,7 @@ a:focus {
 }
 
 .card {
-    display: inline-block;
+    display: flex;
     position: relative;
 	border:none!important;
     width: 100%;
@@ -290,12 +290,8 @@ a:focus {
     background: #fff;
 }
 
-.card-stats .card-header {
-    float: left;
-    text-align: center;
-}
-
 .card .card-header {
+    display: inline;
     padding: 15px 20px 0;
     z-index: 3;
 	background-color:#fff!important;
@@ -308,8 +304,10 @@ a:focus {
     font-size: 16px;
 }
 
-.stats a{
+.stats p{
+    display: inline;
     padding-left: 80px;
+    font-weight: 500;
 }
 
 .card-stats .card-header span {
@@ -354,6 +352,7 @@ a:focus {
 }
 
 .card .card-content .category {
+    display: inline;
     margin-bottom: 0;
 }
 .card .category:not([class*="text-"]) {
@@ -396,7 +395,6 @@ a:focus {
     font-size: 16px;
     font-weight: 400;
 }
-
 
 .card .card-content {
     padding: 15px 20px;
@@ -621,7 +619,6 @@ footer .container-fluid{
 }
 }
 /*===============small-screen overlay sidebar design media queries==============*/
-
 
 
 /* ---------------------------------------------------
